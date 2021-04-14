@@ -171,11 +171,11 @@ function filterByWord(array, str){
     let newArray = []
     for(let i = 0; i < array.length; i++){
       if(array[i].includes(str)){
-        newArray.push(array[i])
-      };
-    };
+        newArray.push(array[i]);
+      }
+    }
     return newArray;
-  };
+  }
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
@@ -203,7 +203,6 @@ function getAverageWordLength(array){
     }
     return Math.round(wordLengthTotal / array.length);
 }
-console.log(getAverageWordLength(originalFlavors));
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
@@ -219,8 +218,16 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
+function getRandomFlavors(array1, array2, array3, array4){
+    let newArray = [...array1, ...array2, ...array3, ...array4];
+    let flavorsList = [];
+    for(let i = 0; flavorsList.length < 31; i++){
+        let flavor = newArray[Math.round(Math.random() * newArray.length)];
+        if(!(flavorsList.includes(flavor))){
+            flavorsList.push(flavor);
+        }
+    }
+    return flavorsList;
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
